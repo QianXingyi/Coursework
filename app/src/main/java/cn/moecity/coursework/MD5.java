@@ -12,11 +12,7 @@ public class MD5 {
     }
 
     public static boolean validatePassword(String password, String inputString) {
-        if (password.equals(encodeByMD5(inputString))) {
-            return true;
-        } else {
-            return false;
-        }
+        return password.equals(encodeByMD5(inputString));
     }
 
 
@@ -40,6 +36,7 @@ public class MD5 {
             resultSb.append(byteToHexString(b[i]));
         }
         return resultSb.toString();
+
     }
 
 
